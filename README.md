@@ -12,12 +12,13 @@ We define variables by using them without Uppercase.
 - How to type an Array?
 
 It depends of what you are going to put in your Array.
-let fruit : string[] = ["apple", "Orange", "Banana"];
+```let fruit : string[] = ["apple", "Orange", "Banana"];```
 
 We can declare an array with data type union - number and string:
 let tab : (string | number)[] = ['Apple', 'Orange', 1, 2, 'Banana', 3];
 
-An oser way to declare an Array : let fruits: Array<string> = ["Apple", "Orange", "Banana"];
+An oser way to declare an Array : 
+```let fruits: Array<string> = ["Apple", "Orange", "Banana"];```
 
 - What is the `any` type?
 
@@ -26,9 +27,9 @@ When we declare a variable without type, TypeScript considers the "any" type.
 - How to type the return of a function as well as the type of its parameters?
 
 To define the return type of a function, we need to write the type after the parameters.
-function myFunction(): number {
+```function myFunction(): number {
   return 26;
-}
+}```
 
 **🎉🎉🎉Update the Github Project board🎉🎉🎉**
 
