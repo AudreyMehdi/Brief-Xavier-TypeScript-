@@ -30,7 +30,8 @@ To define the return type of a function, we need to write the type after the par
 ```ts
 function myFunction(): number {
   return 26;
-}```
+}
+```
 
 **🎉🎉🎉Update the Github Project board🎉🎉🎉**
 
