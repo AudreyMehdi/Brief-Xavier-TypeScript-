@@ -15,7 +15,7 @@ It depends of what you are going to put in your Array.
 ```let fruit : string[] = ["apple", "Orange", "Banana"];```
 
 We can declare an array with data type union - number and string:
-let tab : (string | number)[] = ['Apple', 'Orange', 1, 2, 'Banana', 3];
+```let tab : (string | number)[] = ['Apple', 'Orange', 1, 2, 'Banana', 3];```
 
 An oser way to declare an Array : 
 ```let fruits: Array<string> = ["Apple", "Orange", "Banana"];```
@@ -38,13 +38,125 @@ function myFunction(): number {
 ## Level 2
 
 - What is a class?
+
+It's a group of object (created by NEW word) wich have all the same properties. A class is acting like a template, to build a lot of parameters in one shot, for another lot of element.
+
+```ts
+class Point {
+  x: number;
+  y: number;
+}
+
+const pt = new Point();
+pt.x = 0;
+pt.y = 0;
+```
+
 - What is a class constructor?
+
+The constructor is a special method of the class, used to create objects and initialize field values.
+![Alt text](./image/constructeur.png)
+
+Exemple :
+```ts
+class Point {
+  x: number;
+  y: number;
+ 
+  // Normal signature with defaults
+  constructor(x = 0, y = 0) {
+    this.x = x;
+    this.y = y;
+  }
+}
+```
+
 - What is a class instance?
+
+When we create a class instance, we create a specific object with values beetwin parenthesis.
+Exemple:
+```const premierPoint = new Point (12, 45);```
+
 - How to check that a class is of a certain instance?
+
+The instanceOf operator in TS is used to check whether an object is in instance of a particular class or not.
+objectName instanceOf className; here, if objectName is an instance of className, the operator returns true.
+Othewise, it return false.
+
+```ts
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+const auto = new Car('Honda', 'Accord', 1998);
+
+console.log(auto instanceof Car);
+// Expected output: true
+
+console.log(auto instanceof Object);
+// Expected output: true
+```
+
 - What is `this` in a class?
+
+This. refers to the instance of the class and its properties.
+Exemple : 
+```ts
+class Voiture {
+  marque: string;
+  modele: string;
+
+  constructor(marqueParam: string, modeleParam: string) {
+    this.marque = marqueParam;
+    this.modele = modele.param;
+  }
+}
+const voiture1 = new Voiture("Toyota", "Camry");
+const voiture2 = new Voiture("Honda", "Accord");
+```
+
 - What is a class method?
+
+A method in a class is a function definied inside the class. A method is an action or operation that instances of the class can perform.
+It can access the properties of the instance ans can also take parameters.
+Exemple :
+```ts
+class Animal {
+nom: string;
+
+constructor(nomParam: string) {
+  this.nom = nomParam;
+}
+
+faireDuBruit(): void {
+  console.log("Fait un bruit indéfini");
+}
+}
+const monAnimal = new Animal("Médor");
+
+monAnimal.faireDuBruit(); // affiche "Fait un bruit indéfini"
+```
+
 - What is the visibility of properties?
+
+By default, the visibility of all properties or methods in TypeScript classes is "public";
+
 - What is the difference between `public`, `private` and `protected`?
+
+"public" : acces everywhere;
+"private": acces only inside the class;
+"protected": acces inside the class and inside derived class;
+
+```ts
+class Employe {
+ private code : number;
+ name : string;
+}
+let employeNew = new Employe();
+employeNew.code = 123; // compiler error
+employeNew.name = "Jeanne"; // ok
+```
 
 **🎉🎉🎉Update the Github Project board🎉🎉🎉**
 
