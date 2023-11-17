@@ -27,7 +27,8 @@ When we declare a variable without type, TypeScript considers the "any" type.
 - How to type the return of a function as well as the type of its parameters?
 
 To define the return type of a function, we need to write the type after the parameters.
-```function myFunction(): number {
+```ts
+function myFunction(): number {
   return 26;
 }```
 
