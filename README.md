@@ -273,7 +273,8 @@ class Employee extends Person {
 
         // Calling an additional method within the constructor
         this.showDetails();
-    }
+    }.
+    
 
     // Method specific to the child class
     showDetails(): void {
